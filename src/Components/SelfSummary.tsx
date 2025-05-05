@@ -107,7 +107,9 @@ const SelfSummary: React.FC<SelfSummaryProps> = ({ scrollToFooter }) => {
     <SelfSummaryContainer>
       <TopRow>
         <Row>
+          <Column>
           <Title>{PersonalInfo.name}</Title>
+          <Description>{PersonalInfo.introduction}</Description></Column>
         </Row>
 
         <Row>
@@ -140,7 +142,7 @@ const SelfSummary: React.FC<SelfSummaryProps> = ({ scrollToFooter }) => {
           />
         </Row>
       </TopRow>
-      <Description>{PersonalInfo.introduction}</Description>
+      
     </SelfSummaryContainer>
   );
 };

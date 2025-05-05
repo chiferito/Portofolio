@@ -61,6 +61,21 @@ const AboutMe: React.FC = () => {
       <Divider />
       <ProfileImage src={PersonalInfo.image} alt="Eric Wong-Liu" />
       <AboutText>
+        <p>
+        I'm a Computer Science graduate from the University of British Columbia, currently working as a Software Engineer at BBVA.
+        </p>
+
+        <p>
+        I'm passionate about video games and the technology that powers them, but my interest extends beyond games—I genuinely enjoy problem solving and building efficient, user-centered software solutions.
+        </p>
+
+        <p>
+        I consider myself a quick and adaptable learner. My education and professional experience have given me exposure to a variety of tech stacks, and I'm always eager to pick up new tools or dive into unfamiliar codebases when the project demands it.
+        </p>
+
+        <p>
+        Whether it’s working on gameplay systems or enterprise applications, I strive to write clean, maintainable code that makes a real impact.
+        </p>
        {PersonalInfo.description}
       </AboutText>
     </Container>

@@ -9,6 +9,7 @@ export enum Platform {
   Linux = "Linux",
   iOS = "iOS",
   Android = "Android",
+  Web = "Web"
 }
 
 export enum GameEngine {
@@ -22,6 +23,7 @@ export enum GameEngine {
 export enum MediaType {
   Image = "image",
   YouTube = "youtube",
+  MP4 = "mp4",
 }
 
 export interface MediaItem {
