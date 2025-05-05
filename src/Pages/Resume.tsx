@@ -62,10 +62,12 @@ const Resume: React.FC = () => {
     <CenterContainer>
   <Title>Resume</Title>
   <Divider />
-  <PdfViewer src="/files/resume.pdf" title="Resume PDF" />
-  <DownloadButton href="/files/resume.pdf" download>
-    Download Resume
-  </DownloadButton>
+  <PdfViewer src={`${process.env.PUBLIC_URL}/files/resume.pdf`} title="Resume PDF" />
+
+  <DownloadButton href={`${process.env.PUBLIC_URL}/files/resume.pdf`} download>
+  Download Resume
+</DownloadButton>
+
 </CenterContainer>
   );
 };

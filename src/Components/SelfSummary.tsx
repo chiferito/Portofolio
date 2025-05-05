@@ -114,7 +114,7 @@ const SelfSummary: React.FC<SelfSummaryProps> = ({ scrollToFooter }) => {
 
         <Row>
           <Navbar>
-            <NavbarLink to="/About-me">About me</NavbarLink>
+            <NavbarLink to="/">About me</NavbarLink>
             <NavbarLink to="/Projects">Projects</NavbarLink>
             <NavbarLink to="/Resume">Resume</NavbarLink>
             <NavbarAnchor onClick={scrollToFooter}>Contact</NavbarAnchor>
