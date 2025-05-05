@@ -72,3 +72,7 @@ input, select, textarea {
   border-radius: 10px;
   background: rgba(163, 155, 155, 0.8); 
 }
+
+html {
+  scroll-behavior: smooth;
+}

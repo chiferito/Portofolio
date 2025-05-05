@@ -4,8 +4,9 @@ import { Row } from '../Styles/StyledComponents';
 
 const FooterContainer = styled(Row)`
     align-items: center;
+    justify-content: center; 
     color: silver;
-    height: 30px;
+    height: 50px;
     padding: 0 16px;
     font-size: 12px;
     gap: 4px;
@@ -13,6 +14,7 @@ const FooterContainer = styled(Row)`
     a {
         color: teal;
     }
+    font-size: 1rem;
 `;
 
 const MyLink = styled.a`
@@ -25,7 +27,7 @@ height: 16px;
 
 const Footer: React.FC = () => {
     return (
-        <FooterContainer>
+        <FooterContainer id="footer">
             <p>Contact me at ericwongliu@gmail.com</p>
         </FooterContainer>
     );
