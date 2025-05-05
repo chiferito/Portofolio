@@ -5,9 +5,10 @@ import { Column } from "../Styles/StyledComponents";
 
 const Container = styled(Column)`
   align-items: center;
-  margin-top: 40px;
-  gap: 20px;
-  text-align: center;
+
+  @media (max-width: 768px) {
+    margin-top: 40px;
+  }
 `;
 
 const ProfileImage = styled.img`
@@ -33,31 +34,35 @@ const AboutText = styled.p`
   }
 `;
 
-const CVButton = styled.a`
-  display: inline-block;
-  padding: 10px 20px;
-  font-size: 16px;
-  color: white;
-  background-color: #007bff;
-  text-decoration: none;
-  border-radius: 5px;
-  transition: background 0.3s;
+const Title = styled.div`
+  font-size: 2em;
+  font-family: "PhoenixGaming", sans-serif;
 
-  &:hover {
-    background-color: #0056b3;
+  @media (max-width: 768px) {
+    font-size: 1.5em;
+  }
+`;
+
+const Divider = styled.div`
+  width: 60vw;
+  height: 2px;
+  background-color: #25d366;
+  margin: 20px 0;
+
+  @media (max-width: 768px) {
+    width: 90vw;
   }
 `;
 
 const AboutMe: React.FC = () => {
   return (
     <Container>
-      {/* <ProfileImage src={PersonalInfo.image} alt="Eric Wong-Liu" /> */}
+      <Title>About me</Title>
+      <Divider />
+      <ProfileImage src={PersonalInfo.image} alt="Eric Wong-Liu" />
       <AboutText>
        {PersonalInfo.description}
       </AboutText>
-      <CVButton href={`${PersonalInfo.cvUri}`} download>
-        Download My CV
-      </CVButton>
     </Container>
   );
 };

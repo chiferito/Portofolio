@@ -20,7 +20,42 @@ const Seperator = styled.div`
   opacity: 0.2;
 `;
 
+const Title = styled.div`
+  font-size: 2em;
+  font-family: "PhoenixGaming", sans-serif;
+
+  @media (max-width: 768px) {
+    font-size: 1.5em;
+  }
+`;
+
+const Divider = styled.div`
+  width: 60vw;
+  height: 2px;
+  background-color: #25d366;
+  margin: 20px 0;
+
+  @media (max-width: 768px) {
+    width: 90vw;
+  }
+`;
+
+const Container = styled(Column)`
+  align-items: center;
+  // margin-top: 80px;
+
+  @media (max-width: 768px) {
+    margin-top: 40px;
+  }
+`;
+
 const MainPage: React.FC = () => (
+  <Column style={{ alignItems: 'center', gap: '30px' }}>
+  <Container>
+      <Title>Projects</Title>
+      <Divider />
+  </Container>
+
   <GamesContainer>
     {games.map((game, index) => (
       <React.Fragment key={index}>
@@ -29,6 +64,7 @@ const MainPage: React.FC = () => (
       </React.Fragment>
     ))}
   </GamesContainer>
+</Column>
 );
 
 

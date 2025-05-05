@@ -9,7 +9,20 @@ interface SelfSummaryProps {
   scrollToFooter: () => void;  // Prop for scrolling to Footer
 }
 
-const SelfSummaryContainer = styled(Column)``;
+const SelfSummaryContainer = styled(Column)`
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  z-index: 1000;
+  background-color: #121212; // Match your page background
+  padding: 20px 60px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+
+  @media (max-width: 768px) {
+    padding: 10px 20px;
+  }
+`;
 
 const TopRow = styled(Row)`
   justify-content: space-between;
@@ -99,9 +112,9 @@ const SelfSummary: React.FC<SelfSummaryProps> = ({ scrollToFooter }) => {
 
         <Row>
           <Navbar>
-            <NavbarLink to="/about-me">About me</NavbarLink>
-            <NavbarLink to="/">Projects</NavbarLink>
-            <NavbarLink to="/">Resume</NavbarLink>
+            <NavbarLink to="/About-me">About me</NavbarLink>
+            <NavbarLink to="/Projects">Projects</NavbarLink>
+            <NavbarLink to="/Resume">Resume</NavbarLink>
             <NavbarAnchor onClick={scrollToFooter}>Contact</NavbarAnchor>
           </Navbar>
         </Row>

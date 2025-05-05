@@ -14,6 +14,9 @@ export enum Platform {
 export enum GameEngine {
   Unity = "Unity",
   Unreal = "Unreal",
+  CSharp = "C#",
+  CPP = "C++",
+  Swift = "Swift"
 }
 
 export enum MediaType {
@@ -48,5 +51,5 @@ export interface Game {
   links: { source: LinkImageSource; url: string }[];
   media: MediaItem[];
   platforms: Platform[];
-  engine: GameEngine;
+  engine: GameEngine[];
 }

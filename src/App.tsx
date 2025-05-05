@@ -3,17 +3,20 @@ import { HashRouter as Router, Routes, Route, Link } from 'react-router-dom';
 import { styled } from 'styled-components';
 import MainPage from './Pages/MainPage';
 import AboutMe from './Pages/AboutMe';
+import Resume from './Pages/Resume';
 import Footer from './Components/Footer';
 import SelfSummary from './Components/SelfSummary';
+import ScrollToTop from './Components/ScrollToTop';
 
 const AppContainer = styled.div`
-  min-height: 90vh;
-  padding: 60px;
-  gap: 30px;
-  
+  padding-top: 150px; // height of SelfSummary to offset
+  padding-left: 60px;
+  padding-right: 60px;
+  padding-bottom: 60px;
+  min-height: 100vh;
+
   @media (max-width: 768px) {
-    gap: 0;
-    padding: 30px 10px;
+    padding: 100px 10px 30px 10px;
   }
 `;
 
@@ -29,16 +32,17 @@ const App: React.FC = () => {
 
   return (
     <Router>
+      <ScrollToTop />
       <AppContainer>
         <SelfSummary scrollToFooter={scrollToFooter} />
         
         <Routes>
-          <Route path="/" element={<MainPage />} />
-          <Route path="/about-me" element={<AboutMe />} />
+          <Route path="/Projects" element={<MainPage />} />
+          <Route path="/About-me" element={<AboutMe />} />
+          <Route path="/Resume" element={<Resume />} />
         </Routes>
       </AppContainer>
 
-      {/* Add Footer with the ref */}
       <div ref={footerRef}>
         <Footer />
       </div>

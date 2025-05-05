@@ -75,8 +75,8 @@ const GameInfo: React.FC<GameInfoProps> = ({ game }) => {
                     <InfoValue>{game.platforms.join(", ")}</InfoValue>
                 </InfoRow>
                 <InfoRow>
-                    <InfoKey>Engine:</InfoKey>
-                    <InfoValue>{game.engine}</InfoValue>
+                    <InfoKey>Engine/Language:</InfoKey>
+                    <InfoValue>{game.engine.join(", ")}</InfoValue>
                 </InfoRow>
 
                 {game.source && <InfoRow>
