@@ -1,8 +1,12 @@
 import React from "react";
+import { HashRouter as Router, Routes, Route, Link } from "react-router-dom";
 import { styled } from "styled-components";
 import { PersonalInfo } from "../data";
 import { Column, Row } from "../Styles/StyledComponents";
 import LogoButton from "./LogoButton";
+import MainPage from "../Pages/MainPage";
+import ContactPage from "../Pages/ContactPage";
+import AboutMe from "../Pages/AboutMe";
 
 const SelfSummaryContainer = styled(Column)`
 `;
@@ -11,7 +15,7 @@ const TopRow = styled(Row)`
   justify-content: space-between;
 `
 const Title = styled.div`
-  font-size: 3em;
+  font-size: 2em;
   font-family: "PhoenixGaming", sans-serif;
   
   @media (max-width: 768px) {
@@ -19,11 +23,10 @@ const Title = styled.div`
   }
 `;
 
-const Description = styled.p`
+const Description =styled.div `
   font-size: 2rem;
   max-width: 60vw;
   font-family: "PixelGame", sans-serif;
-  margin-left: 10px;
   color: silver;
 
   @media (max-width: 768px) {
@@ -33,14 +36,36 @@ const Description = styled.p`
   }
 `;
 
-const Logo = styled.img`
-  height: 90px;
-  margin-right: 2vw;
+const Navbar = styled.nav`
+  display: flex;
+  justify-content: center;
+  margin-bottom: 20px;
+  gap: 30px;
 
   @media (max-width: 768px) {
-    height: 50px;
+    margin-bottom: 0;
   }
 `;
+
+const NavbarLink = styled(Link)`
+  font-size: 2rem;
+  text-decoration: none;
+  color: green;
+  font-weight: bold;
+
+  &:hover {
+    color: lightgreen;
+  }
+
+  &:active {
+    transform: scale(0.95);
+  }
+
+  @media (max-width: 768px) {
+      font-size: 1rem;
+      margin-bottom: 0;
+  }
+  `;
 
 
 const SelfSummary: React.FC = () => {
@@ -48,13 +73,22 @@ const SelfSummary: React.FC = () => {
     <SelfSummaryContainer>
       <TopRow>
         <Row>
-          <Logo src={`${process.env.PUBLIC_URL}/favicon.ico`} />
           <Title>{PersonalInfo.name}</Title>
         </Row>
+
         <Row>
-          <LogoButton source="/images/logos/github.png" size={75} margin={12} linkTo={PersonalInfo.links.github} />
-          <LogoButton source="/images/logos/linkedIn.png" size={75} margin={12} linkTo={PersonalInfo.links.linkedIn} />
-          <LogoButton source="/images/logos/itch.io.png" size={75} margin={12} linkTo={PersonalInfo.links.itchIO} />
+        <Navbar>
+          <NavbarLink to="/about-me">About me</NavbarLink>
+          <NavbarLink to="/">Projects</NavbarLink>
+          <NavbarLink to="/">Resume</NavbarLink>
+          <NavbarLink to="/contact">Contact</NavbarLink>
+        </Navbar>
+        </Row>
+
+        <Row>
+          <LogoButton source="/images/logos/github.png" size={50} margin={12} linkTo={PersonalInfo.links.github} />
+          <LogoButton source="/images/logos/linkedIn.png" size={50} margin={12} linkTo={PersonalInfo.links.linkedIn} />
+          <LogoButton source="/images/logos/itch.io.png" size={50} margin={12} linkTo={PersonalInfo.links.itchIO} />
         </Row>
       </TopRow>
       <Description>{PersonalInfo.introduction}</Description>

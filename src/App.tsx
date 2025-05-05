@@ -59,12 +59,11 @@ const App: React.FC = () => {
     <Router>
       <AppContainer>
         <SelfSummary />
-
-        <Navbar>
+        {/* <Navbar>
           <NavbarLink to="/">Games 👾</NavbarLink>
           <NavbarLink to="/about-me">About me 👨🏻‍💻</NavbarLink>
           <NavbarLink to="/contact">Contact 💬</NavbarLink>
-        </Navbar>
+        </Navbar> */}
 
         <Routes>
           <Route path="/" element={<MainPage />} />

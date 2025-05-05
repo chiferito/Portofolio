@@ -1,16 +1,16 @@
 import { AboutMeData, Game, GameEngine, LinkImageSource, MediaType, Platform } from "./types";
 
 export const PersonalInfo: AboutMeData = {
-  name: "YOUR_NAME",
-  role: "YOUR_ROLE",
-  introduction: "SHORT_INTRODUCTION",
+  name: "Eric Wong-Liu",
+  role: "Software Engineer",
+  introduction: "Software Engineer, Gameplay Programmer",
   description: "TELL_ABOUT_YOURSELF",
   image: `${process.env.PUBLIC_URL}/images/Profile.jpg`,
   cvUri: `${process.env.PUBLIC_URL}/files/YOUR_CV.pdf`,
   links: {
-    github: "https://github.com/NAME",
-    itchIO: "https://NAME.itch.io",
-    linkedIn: "https://www.linkedin.com/in/NAME",
+    github: "https://github.com/chiferito",
+    itchIO: "https://chiferito.itch.io/",
+    linkedIn: "https://www.linkedin.com/in/eric-wong-liu-b98b81198/",
   }
 };
 
