@@ -40,6 +40,7 @@ const App: React.FC = () => {
           <Route path="/Projects" element={<MainPage />} />
           <Route path="/" element={<AboutMe />} />
           <Route path="/Resume" element={<Resume />} />
+          <Route path="*" element={<AboutMe />} /> {/* fallback */}
         </Routes>
       </AppContainer>
 
